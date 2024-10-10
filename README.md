@@ -97,6 +97,58 @@ b) From there, proceed to click on the "Create subnet" button.
    
  <img width="734" alt="image" src="https://github.com/user-attachments/assets/098df37e-ac55-4a6b-8b91-591f63439592">
 
+3. Now, enter the subnet name,, and specify the IPv4 CIDR for the subnet.
+
+   
+a) Choose the availability zone
+
+b) And specify the IPv4 CIDR for the subnet.
+
+c) To create another subnet, click on the "Add subnet" button.
+
+  <img width="809" alt="image" src="https://github.com/user-attachments/assets/7f32b409-d032-48ed-b47a-9ff72f0bb62a">
+
+d) Repeat the same steps for the second subnet
+
+e) ensuring to specify the subnet name, choose the availability zone, and provide the IPv4 CIDR.
+
+f) Once completed, click on the "Create" button to create the subnet.
+
+To maintain consistency with our intention of creating both a public and a private subnet, ensure that the naming convention reflects this distinction appropriately.
+
+  <img width="854" alt="image" src="https://github.com/user-attachments/assets/2601889c-7d10-4a65-9a2b-53612ed2a8e0">
+
+Here you will see your subnets being created
+
+  <img width="1167" alt="image" src="https://github.com/user-attachments/assets/9a1de4bd-c3a2-41eb-857f-887a5731db93">
+
+ 
+This is the diagramatic representation of our created resources
+
+
+  ![image](https://github.com/user-attachments/assets/de2ddc3b-714d-4ca3-9586-25acd077d05e)
+
+
+With the creation of subnets, the second part of the task is now completed. Let's proceed to the next part, which involves creating an Internet Gateway and attaching it to VPC.
+
+
+Part-3
+
+
+1. Navigate to the "Internet Gateway" option on the left sidebar.
+
+   
+a) Upon clicking, you will be directed to the Internet Gateway page.
+
+<img width="1380" alt="image" src="https://github.com/user-attachments/assets/a1433d5d-678d-4aff-89ee-7139514cad3a">
+
+2. Specify the name of the internet gateway
+
+(a) Proceed by clicking the button 'create internet gateway'
+
+  <img width="850" alt="image" src="https://github.com/user-attachments/assets/59bde0b5-82cd-42bc-92ad-9d80c5887c12">
+
+
 
 
 
