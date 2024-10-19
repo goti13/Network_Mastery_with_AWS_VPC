@@ -211,6 +211,25 @@ b) Next, click on "Subnet associations," followed by "Edit subnet associations" 
 
 The route table has now been configured to route traffic to the Internet Gateway, allowing connectivity to the Internet. Since only the subnet named "my-public-subnet-l" is associated with this route table, only resources within that subnet can access the internet.
 
+  ![image](https://github.com/user-attachments/assets/a6112488-87a7-4c70-9fca-9f15ead0b7ca)
+
+This is the respresentation of our infastructure so far
+
+
+![image](https://github.com/user-attachments/assets/cd37badb-f13d-4abc-9171-d1b7137f20ab)
+
+
+Part-5
+
+1. Navigate to the "NAT Gateways" section, then click on "Create NAT Gateway."
+
+![image](https://github.com/user-attachments/assets/4da4fee5-dc36-421c-8cd0-0de0d69f93f5)
+
+
+
+
+
+
 
 
 
