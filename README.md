@@ -148,6 +148,26 @@ a) Upon clicking, you will be directed to the Internet Gateway page.
 
   <img width="850" alt="image" src="https://github.com/user-attachments/assets/59bde0b5-82cd-42bc-92ad-9d80c5887c12">
 
+Now, you will notice that it is currently detached, indicating that it is not associated with any VPC. 
+
+  ![image](https://github.com/user-attachments/assets/ac5f54d4-4214-4f2b-bc4d-50961ab4a527)
+
+
+To enable internet connectivity, you must attach the Internet Gateway to the VPC you have previously created.
+
+  ![image](https://github.com/user-attachments/assets/26fb603c-377a-45a4-a33f-a32e4f6a3d5e)
+
+Now attach to a VPC
+
+
+  ![image](https://github.com/user-attachments/assets/e2441801-0cd7-4d65-bd9d-d369a2242298)
+
+  ![image](https://github.com/user-attachments/assets/fac6d3e4-58ea-42e8-8a68-a5529b98aab6)
+
+
+  
+
+
 
 
 
