@@ -164,6 +164,61 @@ Now attach to a VPC
 
   ![image](https://github.com/user-attachments/assets/fac6d3e4-58ea-42e8-8a68-a5529b98aab6)
 
+Part -4
+
+1. Proceed to the "Route Tables" option located on the left sidebar.
+
+a) Once there, click on the "Create route table" button.
+
+  ![image](https://github.com/user-attachments/assets/1cb7ee51-d2a1-4406-9274-73c011c256bb)
+
+
+2. Enter the name of the route table and select the VPC you previously created.
+
+   
+a) Finally, click on the "Create route table" button to proceed.
+
+  ![image](https://github.com/user-attachments/assets/f0749ff7-24dc-48e8-b63b-515f582d2ab5)
+
+
+b) Next, click on "Subnet associations," followed by "Edit subnet associations" to associate the subnet with this route table, We'll associate the public subnet with this route table.
+
+  ![image](https://github.com/user-attachments/assets/8197c724-c873-47b4-b64b-90cfb1fe2108)
+
+
+3. Choose the public subnet and click on save association.
+
+  ![image](https://github.com/user-attachments/assets/3e84701d-77fc-47a9-b030-13858872cdac)
+
+4. Navigate to "Routes" and then click on "Edit routes."
+
+  ![image](https://github.com/user-attachments/assets/6976b5dd-d316-403a-a5f6-e175262f5b3f)
+
+5. Click on add route.
+
+  ![image](https://github.com/user-attachments/assets/a890a33b-4e27-4d62-a364-c184b73982fc)
+
+6. Select "Destination" as "0.0.0.0/0," indicating that every IPv4 address can access this subnet.
+
+   
+8. In the "Target" field, choose "Internet Gateway," and then select the Internet Gateway you created. Finally, save the changes.
+
+  ![image](https://github.com/user-attachments/assets/3d3ef0dd-c714-4915-866e-bc0c535d0788)
+
+  
+  ![image](https://github.com/user-attachments/assets/a02b72b9-def8-4d3c-873d-86a5488f526d)
+
+
+The route table has now been configured to route traffic to the Internet Gateway, allowing connectivity to the Internet. Since only the subnet named "my-public-subnet-l" is associated with this route table, only resources within that subnet can access the internet.
+
+
+
+
+
+
+
+
+
 
   
 
