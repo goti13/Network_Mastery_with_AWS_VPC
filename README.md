@@ -314,6 +314,21 @@ Imagine it as a one-way street sign for your subnet's traffic. When you attach a
 It's like the resources can go out to the internet, but the internet traffic can't directly come in.
 
 
+  ![image](https://github.com/user-attachments/assets/a1eaa169-24f4-4e4b-879e-ec56f7d47a22)
+
+Now, let's proceed further and come to our next part that involves Establishing VPC Peering Connections. For this let's first understand some terms-
+
+
+Note- An EC2 instance is a virtual server in AWS that you can use to run applications. It offers flexible computing power and can be easily scaled up or down. EC2 instances are widely used for hosting websites, running software, and processing data in the cloud.
+
+What is VPC Peering?
+
+VPC peering is like connecting two virtual offices in the cloud so they can talk to each other directly. Just imagine two neighboring offices sharing files and chatting without going through a middleman.
+- By default, EC2 instances in different VPCs cannot communicate with each other.
+- To enable communication between EC2 instances in different VPCs, you can set up VPC peering, VPN connections, or AWS Direct Connect.
+- VPC peering establishes a direct network connection between the VPCs, allowing EC2 instances in one VPC to communicate with EC2 instances in the other VPC.
+
+
 
 
 
