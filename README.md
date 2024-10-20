@@ -280,6 +280,26 @@ d) Finally, save the changes.
 
 ![image](https://github.com/user-attachments/assets/6abddffc-37b3-403b-9827-77e4f640b702)
 
+12. On the subnet association section, click on edit subnet association.
+
+  ![image](https://github.com/user-attachments/assets/8acf1f85-3734-4ac8-b631-e9be52d45029)
+
+a) Choose the private subnet and click on "Save associations"
+
+  ![image](https://github.com/user-attachments/assets/8777b94f-2ad8-4cc0-bdfd-c7567fd36031)
+
+
+Now, the subnet has been successfully attached with the route table.
+
+
+![image](https://github.com/user-attachments/assets/d42ce23c-6383-40ef-97a4-3edfd7cfd8eb)
+
+
+
+
+
+
+
 
 
 
