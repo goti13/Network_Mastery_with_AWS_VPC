@@ -216,14 +216,89 @@ The route table has now been configured to route traffic to the Internet Gateway
 This is the respresentation of our infastructure so far
 
 
-![image](https://github.com/user-attachments/assets/cd37badb-f13d-4abc-9171-d1b7137f20ab)
+  ![image](https://github.com/user-attachments/assets/cd37badb-f13d-4abc-9171-d1b7137f20ab)
 
 
 Part-5
 
 1. Navigate to the "NAT Gateways" section, then click on "Create NAT Gateway."
 
-![image](https://github.com/user-attachments/assets/4da4fee5-dc36-421c-8cd0-0de0d69f93f5)
+  ![image](https://github.com/user-attachments/assets/4da4fee5-dc36-421c-8cd0-0de0d69f93f5)
+
+2. Then mention the name of the NAT Gateway.
+
+ ![image](https://github.com/user-attachments/assets/d91d87aa-04af-446e-b44d-b6ecb9b24c4b)
+
+
+3. Now, choose the Private subnet and connectivity type as private
+
+  ![image](https://github.com/user-attachments/assets/83a332c6-f513-4bc6-aec9-a554427e77be)
+
+4. Then click on Create NAT Gateway.
+
+  ![image](https://github.com/user-attachments/assets/58580c89-b196-449b-b026-922faf808fca)
+
+Your NAT Gateway is created successfully.
+
+  ![image](https://github.com/user-attachments/assets/37746157-4f73-4718-b84a-2b3fad7134e8)
+
+5. Select your NAT Gateway.
+
+   
+6. Then navigate to the "Details" tab.
+
+   
+7. From there, locate the subnet ID and click on it.
+
+  ![image](https://github.com/user-attachments/assets/b3f5b22c-4c0b-4a0b-b738-c2f36084c429)
+
+8. In the subnet page, navigate to the "Route Table" section.
+
+    
+9. Then click on the "route table ID" - In our case - 1"rtb-053d3876b518b4d49"
+
+  ![image](https://github.com/user-attachments/assets/e81547ae-abb7-4c7f-ae15-0ed0d7ffa7d6)
+
+10. Proceed to the "Routes" section, then click on "Edit routes."
+
+  ![image](https://github.com/user-attachments/assets/ba74abc3-b98a-4cb4-bf25-222cc193cdb5)
+
+11. Click on "Add routes"
+
+  ![image](https://github.com/user-attachments/assets/2c9cb322-6ce5-4d8b-93df-31346be57c70)
+
+a) Select "Destination" as "0.0.0.0/0."
+
+
+b) In the "Target" field, choose "NAT Gateway,"
+
+
+c) Then select the NAT Gateway you created.
+
+
+d) Finally, save the changes.
+
+![image](https://github.com/user-attachments/assets/6abddffc-37b3-403b-9827-77e4f640b702)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
