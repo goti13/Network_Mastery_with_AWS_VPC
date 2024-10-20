@@ -295,6 +295,8 @@ Now, the subnet has been successfully attached with the route table.
 ![image](https://github.com/user-attachments/assets/d42ce23c-6383-40ef-97a4-3edfd7cfd8eb)
 
 
+![image](https://github.com/user-attachments/assets/683baac7-d57c-4f4e-aacd-e72aca739958)
+
 
 
 
