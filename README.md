@@ -298,7 +298,13 @@ Now, the subnet has been successfully attached with the route table.
 ![image](https://github.com/user-attachments/assets/683baac7-d57c-4f4e-aacd-e72aca739958)
 
 
+Difference between Internet Gateway and NAT Gateway
 
+Internet Gateway:
+Think of it like a door to the internet for your subnet. When you attach an Internet Gateway to a subnet, it allows the resources in that subnet (like EC2 instances) to reach out to the internet and also allows internet traffic to reach those resources. It's like having a door both to enter and exit the subnet.
+
+NAT Gateway:
+Imagine it as a one-way street sign for your subnet's traffic. When you attach a NAT Gateway to a subnet, it lets the resources in that subnet (like EC2 instances) access the internet, but it doesn't allow incoming traffic from the internet to reach those resources. It's like the resources can go out to the internet, but the internet traffic can't directly come in.
 
 
 
