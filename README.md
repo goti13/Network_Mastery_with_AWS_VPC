@@ -329,6 +329,176 @@ VPC peering is like connecting two virtual offices in the cloud so they can talk
 - VPC peering establishes a direct network connection between the VPCs, allowing EC2 instances in one VPC to communicate with EC2 instances in the other VPC.
 
 
+Part -6
+
+1. Let's begin by creating two VPCs in the same region. Alternatively, you may choose a different region if needed.
+
+
+  ![image](https://github.com/user-attachments/assets/fd7046f4-539a-4e1e-b20a-8c1928422790)
+
+
+  ![image](https://github.com/user-attachments/assets/fdd16393-ab39-4bd4-93be-7abd55a854ec)
+
+
+
+2. Navigate to the "Peering Connections" option on the left sidebar.
+
+   
+a) Upon clicking, you'll be directed to the VPC peering page.
+
+
+b) From there, proceed to click on the "Create Peering Connection" button.
+
+  ![image](https://github.com/user-attachments/assets/4b0eefb1-9cae-4a8f-bd62-782350914424)
+
+3. Now, provide a name for the VPC peering connection.
+
+a) select the requester VPC.
+
+b) Choose the account "My account" since the VPCs are in our own AWS account.
+
+c) Ensure to use the same region, "This Region (ap-southeast-1)," as the VPCs were created in the same region.
+
+d) Next, select the accepter VPC.
+
+e) proceed by clicking on the "Create Peering Connection" button.
+
+  ![image](https://github.com/user-attachments/assets/f49077f7-e094-4eea-9ef7-233bca7ccd74)
+
+
+Then, you'll see this:
+
+  ![image](https://github.com/user-attachments/assets/03655eca-b072-4d5e-a8ed-76363d43368a)
+
+
+
+4. In the Peering Connection page, locate the "Actions" option on the right side.
+   
+a) Click on it, then select "Accept Request."
+
+ ![image](https://github.com/user-attachments/assets/032f812e-f6e8-4590-ac22-e728e2bf7636)
+
+
+b) Click on Accept request.
+
+  ![image](https://github.com/user-attachments/assets/2de21dab-ce27-4217-82bd-1da106358529)
+
+
+5. Now, click on Main route table ID of the accepter VPC.
+
+  <img width="1434" alt="image" src="https://github.com/user-attachments/assets/ebeb93e4-fbde-4105-be52-15826c4b5c47">
+
+6. Choose the route table.
+
+   
+a) then navigate to the "Routes" section.
+
+
+b) Click on "Edit route."
+
+  ![image](https://github.com/user-attachments/assets/0b5df5e6-4f02-4965-8bd3-c5ad1b9e51b0)
+
+
+c) Click on add route.
+
+
+  ![image](https://github.com/user-attachments/assets/56f46312-8b43-45d1-a23e-9cf0d424d449)
+
+
+7. Go to the VPC page
+
+   
+a) select the requester VPC.
+
+b) In the details tab, you'll find the IPv4 CIDR. (in this case - 	172.16.0.0/16)
+
+
+c) Copy this CIDR and paste it in the "Destination" field when adding a route.
+
+  ![image](https://github.com/user-attachments/assets/d00f9065-9b8f-407f-a224-9548639a5071)
+
+d) In the target, choose VPC peering and then choose the peering connection you have created. Click on save changes.
+
+8. Now, copy the IPv4 CIDR of the accepter VPC. (in this case - 192.168.0.0/16)
+
+  ![image](https://github.com/user-attachments/assets/33ec3e5c-36cd-4559-9ecd-aaa9cf3f46c5)
+
+9. Now, click on Main route table ID of the requester VPC.
+
+  ![image](https://github.com/user-attachments/assets/89bd0095-972a-4b7d-867d-5a0c111e5af6)
+  
+
+10. Choose the route table, then navigate to the "Routes" section. Click on "Edit route."
+    
+
+  ![image](https://github.com/user-attachments/assets/1df034e9-0d85-44a1-8048-112fe5260df6)
+
+
+11. Click on add route.
+
+    
+a) Paste the CIDR in the "Destination" field.
+
+
+b) In the target, choose VPC peering
+
+
+c) Then choose the peering connection you have created.
+
+
+  ![image](https://github.com/user-attachments/assets/84eec17a-5390-4351-99b4-4439e0468577)
+
+The connection has been successfully established. Now, resources in the accepter VPC can connect to resources in the requester VPC, and vice versa.
+
+![image](https://github.com/user-attachments/assets/9a0bb248-49b1-4b14-acde-5ff294887aa2)
+
+
+Let's see some points that you need to know about VPC Peering, VPC Peering Basics: VPC peering allows direct communication between two VPCs using private
+
+
+IP addresses. Region compatibility: VPC peering can be set up between VPCs in the same AWS region or different regions and the same AWS account or different
+AWS accounts.
+
+
+For more reference, you can go through the  [Create a VPC peering connection](https://docs.aws.amazon.com/vpc/latest/peering/create-vpc-peering-connection.html#same-account-same-region)
+
+
+CIDR Blocks: The CIDR blocks of the VPCs involved in the peering connection should not overlap or conflict with each other. Each VPC must have a unique CIDR block.
+IP Addressing: Resources in one VPC can communicate with resources in the peered VPC using their private IP addresses.
+
+
+Security Groups and NACLs: Ensure proper configuration of Security Groups and Network Access Control Lists (NACLs) to allow traffic between peered VPCs.
+
+
+Direct Communication: Resources in one VPC can directly communicate with resources in the peered VPC without requiring internet access.
+
+
+Transitive Traffic: Traffic cannot flow through a VPC peering connection to reach other VPCs not directly peered.
+
+
+Routing: Update route tables in both VPCs to allow traffic to flow through the peering connection. Each VPC's route table must contain a route entry for the CIDR block of the peer VPC, pointing to the peering connection.
+
+
+Limitations: There are limits on the number of VPC peering connections that can be established per VPC, as well as limitations on the number of route entries per route table.
+Now, let's understand some more terms,
+
+
+What is VPC endpoint?
+
+
+Think of a VPC endpoint like a dedicated, secure tunnel between your house (VPC) and a library (AWS service). Instead of going through the bustling streets (public internet), you have a direct pathway from your home to the library. This pathway ensures that only you and authorized users can access the library's resources, like books or documents, without exposing them to outside risks. It's a private, efficient way to access what you need, keeping your data safe from prying eyes on the internet.
+
+Let's understand the problem we were facing,
+When you're backing up data from an EC2 instance to an $3 bucket, it usually goes over the internet, whether the instance is in a public or private subnet. But if the data is sensitive, that means it's risky because hackers could try to get it while it's traveling over the internet.
+  
+
+  ![image](https://github.com/user-attachments/assets/1fd82538-4a41-489c-80f5-dcb5a911163e)
+
+To avoid this risk, we can use something called VPC endpoints. These endpoints make a private connection between the VPC and S3, so the data doesn't have to go over the internet. This way, even sensitive data stays safe from hackers and other threats.
+
+  ![image](https://github.com/user-attachments/assets/951c2555-c53c-4a41-b547-51a464576b9f)
+
+
 
 
 
